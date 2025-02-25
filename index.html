@@ -1,0 +1,68 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="A book generator application" content="Peek-a-book by Jasmine">
+    <title>Peek-a-book by Jasmine</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <h1 class="PageTitle" style="margin-right: 40px; line-height: 0.7;;">peek-<i>a</i></h1>
+    <div style="display: flex; align-items: center; justify-content: center;">
+        <h1 class="PageTitle" style="margin-left: 40px;">-b</h1>
+        <div class="eyes">
+            <div class="eye"></div>
+            <div class="eye"></div> 
+        </div>
+        <h1 class="PageTitle">k!</h1>
+    </div>
+    <h1 id="PageSubtitle">Book recommendations by Jasmine</h1>
+    <div class="card">
+        <img src="Star 1.png" id="star" width="60px" height="60px" style="display:none;">
+        <img src="Star 2.png" id="star1" width="60px" height="60px" style="display:none;">  
+        <div id="bookmark" style="display:none; font-size:48px; color:#555231;"><i class="fa fa-bookmark"></i></div> 
+        <div id="book-start">
+            <p>⋆౨ৎ˚⟡˖</p>
+            <h2 style="margin-bottom: 0px;">Welcome to <b>Peek-a-book</b><br> where you can generate a book from the ones I read by answering the questions!</h2>
+            <p>⋆౨ৎ˚⟡˖</p>
+            <button id="main-btn" data-value="start">START</button>
+        </div>
+        <div id="book-genre" class="step" style="display:none;">
+            <h2>In the mood for something...</h2>
+            <button class="option" id="genre" data-value="sad">sad</button>
+            <button class="option" id="genre" data-value="happy">happy</button>
+            <button class="option" id="genre" data-value="reflective">reflective</button>
+            <button class="option" id="genre" data-value="romantic">romantic</button>
+            <button class="option" id="genre" data-value="adventurous">adventurous</button>
+        </div>
+        <div id="book-length" class="step" style="display:none;">
+            <h2>and a book that's...</h2>
+            <button class="option" id="length" data-value="short">short</button>
+            <button class="option" id="length" data-value="medium">medium</button>
+            <button class="option" id="length" data-value="long">long</button>
+        </div>
+        <div id="book-pace" class="step" style="display:none;">
+            <h2>and the pace must be...</h2>
+            <button class="option" id="pace" data-value="slow">slow</button>
+            <button class="option" id="pace" data-value="moderate">moderate</button>
+            <button class="option" id="pace" data-value="fast">fast</button>
+        </div>
+
+        <button id="generate" style="display:none;">Generate Book</button>
+        <div id="loading" style="display:none; justify-content: center; align-items: center;">
+            <div class="spinner"></div>
+            <h5>Generating Book...</h5></div>
+        <div id="result"></div>
+        <div id ="retry-btn"><button id="retry" style="display:none;"><!--<i class="material-icons">refresh</i>-->TRY AGAIN</button></div>
+        
+    </div>
+
+</body>
+    
+</html>
