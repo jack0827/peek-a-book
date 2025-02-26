@@ -41,7 +41,7 @@ $(function(){
                 console.log("Values:", userPace, userLength, userGenre);
             
                 $.ajax({
-                    url: "https://prod-30.southeastasia.logic.azure.com:443/workflows/b6c0ec0e675c4917bbd70c99e148c42c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=vnV0AhOqzV_N7TMuB12vs-zeKIiR7DeeHoUXYQV7kxw", 
+                    url: "https://prod-37.southeastasia.logic.azure.com:443/workflows/84793fd72ad1463d9087697e81396062/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=kjmJ8litu6SmGo2B6bOPOLVx7fS7nQkmZFcDq1SGM8c", 
                     type: "POST",
                     contentType: "application/json",
                     data: JSON.stringify({
@@ -70,8 +70,8 @@ $(function(){
                             border-radius: 5px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 25px 0 rgba(0, 0, 0, 0.15);">
                             <h2 style="margin-bottom: 0px;"><i>${response.title}</i></h2>
                             <h2 style="font-size: 1em; margin-top: 2px; margin-bottom: 0px;"><i> by ${response.author}</i></h2>
-                            <p style="font-size: 0.7em; margin-top: 10px; margin-bottom: 10px; text-align: justify;
-                            text-justify: distribute;"><i>"${response.quote}"</i></p>
+                            <p style="font-size: 0.7em; margin-top: 10px; margin-bottom: 10px; justify-content: center; text-align: justify;
+                            text-justify: distribute; word-spacing: -1px;"><i>"${response.quote}"</i></p>
                             ${blurb}
                         `);
                     }, 
