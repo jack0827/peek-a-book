@@ -51,7 +51,10 @@ $(function(){
                     }),
                     success: function(response) {
                         console.log("Success:", response);
-            
+                        var quoteHTML = response.quote && response.quote.trim() !== "" 
+                        ? `<p id="quote" style="margin-top: 12px; margin-bottom: 10px; justify-content: center; text-align: center;
+                        text-justify: inter-word; word-spacing: -1px;"><i>"${response.quote}"</i></p>` 
+                        : "";
                         var blurb = `
                             <div>
                                 <button class="blurb-button">${genre}</button>
@@ -70,8 +73,7 @@ $(function(){
                             border-radius: 5px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 25px 0 rgba(0, 0, 0, 0.15);">
                             <h2 id="booktitle" style="margin-bottom: 0px;"><i>${response.title}</i></h2>
                             <h2 id="bookauthor" style="margin-top: 2px; margin-bottom: 0px;"><i> by ${response.author}</i></h2>
-                            <p id="quote" style="margin-top: 12px; margin-bottom: 10px; justify-content: center; text-align: center;
-                            text-justify: inter-word; word-spacing: -1px;"><i>"${response.quote}"</i></p>
+                            ${quoteHTML}
                             ${blurb}
                         `);
                     }, 
