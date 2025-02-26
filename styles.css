@@ -250,12 +250,16 @@ h5{
     font-size: 1em;
     font-weight: 300;
     font-style: normal;
-    width: 180px;
+    width: 150px;
     transition: 0.5s;
 }
 
 #main-btn:hover, #retry:hover {
     background-color: #726f4f;
+}
+
+#retry{
+    margin-top: 10px;
 }
 
 label, select {
@@ -277,8 +281,8 @@ label, select {
 .blurb-button {
     display: inline-block;
     width: fit-content;
-    margin-top: 5px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     padding: 10px 10px;
     border-radius: 20px;
     border: none;
@@ -289,6 +293,20 @@ label, select {
     font-weight: 300;
     font-style: normal;
     transition: 0.5s;
+}
+
+#quote{
+    font-size: 0.7em;
+}
+
+#bookauthor{
+    font-size: 1em;
+    
+}
+
+#booktitle{
+    font-size: 1.2em;
+    
 }
 
 .spinner {
@@ -397,7 +415,7 @@ label, select {
     }
 
     .card {
-        width: 60%;
+        width: 70%;
         height: 60%;
         padding: 10px;
     }
@@ -414,7 +432,7 @@ label, select {
     }
 
     #main-btn{
-        width: 80%;
+        width: 60%;
         padding: 10px 20px;
     }
 
@@ -429,7 +447,24 @@ label, select {
     }
 
     .blurb-button {
+        font-size: 0.8em;
         width: fit-content;
-        padding:10px 10px;
+        padding:10px 12px;
+        margin-bottom: 10px;
     }
+
+    #quote{
+        font-size: 0.8em;
+    }
+
+    #booktitle{
+        font-size: 1.5em;
+    }
+
+    #bookauthor{
+        font-size: 1.2em;
+        
+    }
+
 }
+        

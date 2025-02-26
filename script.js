@@ -66,12 +66,12 @@ $(function(){
             
                         $("#retry").show();
                         $("#result").html(`
-                            <img src="${response.image}" alt="Book Image" style="width: 120px; height: auto; margin-bottom: 15px; margin-top: 30px; 
+                            <img id="bookimg" src="${response.image}" alt="Book Image"  style="width: 125px; height: auto; margin-bottom: 15px; margin-top: 10px; 
                             border-radius: 5px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 25px 0 rgba(0, 0, 0, 0.15);">
-                            <h2 style="margin-bottom: 0px;"><i>${response.title}</i></h2>
-                            <h2 style="font-size: 1em; margin-top: 2px; margin-bottom: 0px;"><i> by ${response.author}</i></h2>
-                            <p style="font-size: 0.7em; margin-top: 10px; margin-bottom: 10px; justify-content: center; text-align: justify;
-                            text-justify: distribute; word-spacing: -1px;"><i>"${response.quote}"</i></p>
+                            <h2 id="booktitle" style="margin-bottom: 0px;"><i>${response.title}</i></h2>
+                            <h2 id="bookauthor" style="margin-top: 2px; margin-bottom: 0px;"><i> by ${response.author}</i></h2>
+                            <p id="quote" style="margin-top: 12px; margin-bottom: 10px; justify-content: center; text-align: center;
+                            text-justify: inter-word; word-spacing: -1px;"><i>"${response.quote}"</i></p>
                             ${blurb}
                         `);
                     }, 
