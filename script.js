@@ -8,23 +8,14 @@ $(function(){
 
         if (step.attr("id") === "book-genre") {
             genre = value;
-            $("#star").animate({top: '90%'}, 1000);
-            $("#star").removeClass("pink-filter");
-            $("#star").addClass("blue-filter");
-
-            $("#star1").animate({bottom: '90%'}, 1000);
-            $("#star1").removeClass("yellow-filter");
-            $("#star1").addClass("pink-filter");
+            $("#star").animate({top: '90%'}, 1000).removeClass("pink-filter").addClass("blue-filter");
+            $("#star1").animate({bottom: '90%'}, 1000).removeClass("yellow-filter").addClass("pink-filter");
 
         } else if (step.attr("id") === "book-length") {
             length = value;
-            $("#star").animate({top: '-5%'}, 1000);
-            $("#star").removeClass("blue-filter");
-            $("#star").addClass("yellow-filter");
+            $("#star").animate({top: '-5%'}, 1000).removeClass("blue-filter").addClass("yellow-filter");
+            $("#star1").animate({bottom: '-5%'}, 1000).removeClass("pink-filter").addClass("blue-filter");
 
-            $("#star1").animate({bottom: '-5%'}, 1000);
-            $("#star1").removeClass("pink-filter");
-            $("#star1").addClass("blue-filter");
         } else if (step.attr("id") === "book-pace") {
             pace = value;
             $("#star").hide(1000);
@@ -33,11 +24,10 @@ $(function(){
             $("#loading").show();
 
             setTimeout(function() {
-                var userPace = pace;   // Replace with user input
-                var userLength = length; // Replace with user input
-                var userGenre = genre; // Replace with user input
-            
-                // Debugging: Check values before sending
+                var userPace = pace;   
+                var userLength = length; 
+                var userGenre = genre;
+    
                 console.log("Values:", userPace, userLength, userGenre);
             
                 $.ajax({
@@ -90,7 +80,6 @@ $(function(){
 
         }
             
-            // Ensure these are outside setTimeout
     step.hide();
     nextStep.fadeIn(1500);
             
@@ -118,21 +107,15 @@ $(function(){
         $(".PageTitle").hide(5);
         $("#PageSubtitle").hide(5);
 
-        $("#star").addClass("pink-filter");
-        $("#star1").addClass("yellow-filter");
-        $("#star").show(1200);
-        $("#star1").show(1200);
+        $("#star").addClass("pink-filter").show(1200);
+        $("#star1").addClass("yellow-filter").show(1200);
       });
 
       $("#retry").click(function(){
         $("#retry").hide();
         $("#bookmark").hide();
-        $("#star").removeClass("yellow-filter");
-        $("#star").addClass("pink-filter");
-        $("#star1").removeClass("blue-filter");
-        $("#star1").addClass("yellow-filter");
-        $("#star").show(1200);
-        $("#star1").show(1200);
+        $("#star").removeClass("yellow-filter").addClass("pink-filter").show(1200);
+        $("#star1").removeClass("blue-filter").addClass("yellow-filter").show(1200);
         $("#result").empty();
         $(".card").animate({height: '380px'}, 500);
         $("#book-genre").fadeIn(1500);
